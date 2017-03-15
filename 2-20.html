@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            console.log('c')
+        }
+        window.onload = function () {
+            console.log('d')
+        }
+        $(document).ready(function () {
+
+        })
+        $(function () {
+            function validate(f){
+                var value=f.email.value;
+                if(!/^\w+@\w+\.\w+$/.test(value)){
+                    //alert(/^\w+@\w+\.\w+$/.test(value));
+                    alert("Email输入格式不正确");
+                    f.email.focus();
+                    f.email.select();
+                    return false;
+                }else{
+                    console.log("123");
+                }
+
+                return true;
+            }
+            console.log($("#submit"))
+            $("#submit").on('click', function () {
+                console.log('a')
+            })
+            $("#submit").on('click', function () {
+                console.log('b')
+            })
+            $("#submit").on('click',
+                function(){
+                validate(document.myform)
+                }
+            )
+        })
+
+    </script>
+</head>
+<body>
+<form action="" method="post" name="myform" id="myform">
+    Email:<input type="type" name="email" />
+    <!--<input type="submit"  value="提交"/>-->
+</form>
+<button id="submit">提交</button>
+</body>
+
+</html>

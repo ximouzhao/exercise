@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language ="javascript">
+        function fun(thisurl) {
+            window.open(thisurl,"页面标题","width=470,height=150,scrollbars=yes,resizable=no");
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post" name="myform">
+        网址：<select name="url"  onchange="fun(this.value)">
+                <option value ="http://www.baidu.com" >EVENT-01</option>
+                <option value="2-20.html">EVENT-02</option>
+                <option value="www.google.com">EVENT-03</option>
+            </select>
+
+    </form>
+</body>
+</html>
