@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script language="JavaScript">
+			function show(){
+				var value=document.myform.inputName.value;
+				alert("输入的内容是："+value);
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="post" name="myform">
+			请输入内容:<input type="text" name="inputName" />
+			<input type="button" value="显示" onclick="show()" />
+		</form>
+	</body>
+</html>
